@@ -1,18 +1,54 @@
 import React from "react";
-// import PropTypes from 'prop-types';
 import { useState } from "react";
-
 import {
   Wrapper,
   QuestionContainer,
+  InputContainer,
   TextContainer,
   StyledRadioButton,
   SelectableOption,
   SubmitButton
-} from "./App.styled.js";
+} from "./app.styled.js";
+import PopupMessage from "./PopupMessage";
+
+const contentful = require("contentful-management");
+const client = contentful.createClient({
+  accessToken: process.env.REACT_APP_ACCESS_TOKEN
+});
 
 const App = () => {
-  const [isChecked, setIsChecked] = useState(null);
+  const [isChecked, setIsChecked] = useState({});
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const checkErrorBeforeSubmit = () => {
+    const checkedInfo = Object.keys(isChecked).map(key => key);
+    if (checkedInfo.length < 5) return true;
+    return false;
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  const handleSubmit = () => {
+    if (checkErrorBeforeSubmit()) {
+      setIsPopupOpen(true);
+    } else {
+      client
+        .getSpace(process.env.REACT_APP_SPACE_ID)
+        .then(space =>
+          space.createEntry(process.env.REACT_APP_ENTRY_ID, {
+            fields: {
+              answers: {
+                "en-US": isChecked
+              }
+            }
+          })
+        )
+        .then(entry => console.log(entry))
+        .catch(console.error);
+    }
+  };
 
   const questions = [
     {
@@ -26,62 +62,76 @@ const App = () => {
     {
       label: "2. This is a short text",
       options: [
-        { valueStatus: "value1", keyStatus: "1.1" },
-        { valueStatus: "value2", keyStatus: "1.2" },
-        { valueStatus: "value3", keyStatus: "1.3" }
+        { valueStatus: "value1", keyStatus: "2.1" },
+        { valueStatus: "value2", keyStatus: "2.2" },
+        { valueStatus: "value3", keyStatus: "2.3" }
       ]
     },
     {
       label: "3. This is a medium text",
       options: [
-        { valueStatus: "value1", keyStatus: "1.1" },
-        { valueStatus: "value2", keyStatus: "1.2" },
-        { valueStatus: "value3", keyStatus: "1.3" }
+        { valueStatus: "value1", keyStatus: "3.1" },
+        { valueStatus: "value2", keyStatus: "3.2" },
+        { valueStatus: "value3", keyStatus: "3.3" }
       ]
     },
     {
       label: "4. This is a long text",
       options: [
-        { valueStatus: "value1", keyStatus: "1.1" },
-        { valueStatus: "value2", keyStatus: "1.2" },
-        { valueStatus: "value3", keyStatus: "1.3" }
+        { valueStatus: "value1", keyStatus: "4.1" },
+        { valueStatus: "value2", keyStatus: "4.2" },
+        { valueStatus: "value3", keyStatus: "4.3" }
       ]
     },
     {
       label: "5. This is a very long text",
       options: [
-        { valueStatus: "value1", keyStatus: "1.1" },
-        { valueStatus: "value2", keyStatus: "1.2" },
-        { valueStatus: "value3", keyStatus: "1.3" }
+        { valueStatus: "value1", keyStatus: "5.1" },
+        { valueStatus: "value2", keyStatus: "5.2" },
+        { valueStatus: "value3", keyStatus: "5.3" }
       ]
     }
   ];
 
+  console.log("isChecked", isChecked);
+
   return (
     <Wrapper>
-      <QuestionContainer>
-        {questions.map((item, index) => (
-          <TextContainer key={index}>
-            <p>{item.label}</p>
-            {item.options.map((selectedOption, e) => (
-              <SelectableOption>
-                <StyledRadioButton
-                  key={e}
-                  type="radio"
-                  name={item.label}
-                  value={selectedOption.valueStatus}
-                  isChecked={selectedOption.keyStatus}
-                  onChange={() => setIsChecked(selectedOption.keyStatus)}
-                />
-                <label className="labelStyle">
-                  {selectedOption.valueStatus}
-                </label>
-              </SelectableOption>
-            ))}
-          </TextContainer>
-        ))}
-      </QuestionContainer>
-      <SubmitButton>Submit</SubmitButton>
+      <InputContainer>
+        <QuestionContainer>
+          {questions.map((item, index) => (
+            <TextContainer key={index}>
+              <p>{item.label}</p>
+              {item.options.map((selectedOption, e) => (
+                <SelectableOption>
+                  <StyledRadioButton
+                    key={e}
+                    type="radio"
+                    name={item.label}
+                    value={selectedOption.valueStatus}
+                    isChecked={selectedOption.keyStatus}
+                    onChange={() =>
+                      setIsChecked({
+                        ...isChecked,
+                        [index]: selectedOption.keyStatus
+                      })
+                    }
+                  />
+                  <label className="labelStyle">
+                    {selectedOption.valueStatus}
+                  </label>
+                </SelectableOption>
+              ))}
+            </TextContainer>
+          ))}
+        </QuestionContainer>
+        <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
+      </InputContainer>
+      {isPopupOpen && (
+        <PopupMessage error closeAction={closePopup}>
+          Oh Snap! Looks like you forgot to answer one of the questions!
+        </PopupMessage>
+      )}
     </Wrapper>
   );
 };

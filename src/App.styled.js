@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
 `;
-
+export const InputContainer = styled.div`
+  margin: 10px;
+`;
 export const QuestionContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,19 +40,29 @@ export const StyledRadioButton = styled.input`
   transition: all 150ms;
   cursor: pointer;
   background: transparent;
-  border: 1px solid;
+  border: 1px solid ${({ checked }) => (checked ? "green" : "grey")};
   opacity: 1;
   margin-right: 3px;
 
-  &:hover {
-    border: 1px solid #555252;
+  &:active {
+    border: 1px solid green;
   }
 `;
 
-export const SubmitButton = styled.button`
-  float: left;
+export const SubmitButton = styled.div`
+  padding: 3px;
+  width: 70px;
+  height: 25px;
   background-color: green;
   font-size: 20px;
   margin-top: 30px;
   cursor: pointer;
+  border: 1px solid black;
+  text-align: center;
+  margin: 20px 0 50px 10px;
+`;
+export const Separator = styled.div`
+  border-bottom: 1px solid #555252;
+  margin: 10px 0;
+  width: 100%;
 `;
