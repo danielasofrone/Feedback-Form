@@ -19,6 +19,7 @@ const client = contentful.createClient({
 const App = () => {
   const [isChecked, setIsChecked] = useState({});
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [status, setStatus] = useState("error");
 
   const checkErrorBeforeSubmit = () => {
     const checkedInfo = Object.keys(isChecked).map(key => key);
@@ -34,6 +35,8 @@ const App = () => {
     if (checkErrorBeforeSubmit()) {
       setIsPopupOpen(true);
     } else {
+      setIsPopupOpen(true);
+      setStatus("success");
       client
         .getSpace(process.env.REACT_APP_SPACE_ID)
         .then(space =>
@@ -93,8 +96,6 @@ const App = () => {
     }
   ];
 
-  console.log("isChecked", isChecked);
-
   return (
     <Wrapper>
       <InputContainer>
@@ -128,9 +129,10 @@ const App = () => {
         <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
       </InputContainer>
       {isPopupOpen && (
-        <PopupMessage error closeAction={closePopup}>
-          Oh Snap! Looks like you forgot to answer one of the questions!
-        </PopupMessage>
+        <PopupMessage
+          popupStatus={status}
+          closeAction={closePopup}
+        ></PopupMessage>
       )}
     </Wrapper>
   );

@@ -3,35 +3,53 @@ import styled, { css } from "styled-components";
 export const PopupWrapper = styled.div`
   position: absolute;
   margin: 0 auto;
-  top: 0;
+  top:0;
   left: 0;
   right: 0;
-  min-width: 250px;
-  max-width: 550px;
+  min-width: 200px;
+  max-width: 500px;
   padding: 20px;
-  ${({ error }) =>
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* ${({ error }) =>
     error &&
     css`
       background-color: red;
-    `}
+    `} */
 `;
 
+export const IconContainer = styled.div`
+  margin-top: 20px;
+  text-align: center;
+`;
+export const Icon = styled.img`
+  height: 60px;
+  width: 60px;
+`;
 export const TextContainer = styled.div`
-  font-size: 20px;
-  color: white;
   text-align: center;
   margin-bottom: 30px;
 `;
 
-export const ConfirmButton = styled.div`
-  padding: 3px;
-  width: 70px;
-  height: 25px;
-  background-color: white;
-  color: black;
-  font-size: 20px;
-  margin: 0 auto;
+export const CloseButtonContainer = styled.div`
+  position: absolute;
+  right: 20px;
+  top: 30px;
   cursor: pointer;
-  border: 1px solid black;
+`;
+export const CloseButton = styled.img`
+  width: 30px;
+  height: 30px;
+`;
+export const MessageTitle = styled.div`
+  margin: 30px 0 20px 0;
+  font-size: 25px;
+  color: #555252;
   text-align: center;
+`;
+export const MessageText = styled.div`
+  font-size: 20px;
+  color: #555252;
+  text-align: center;
+  white-space: normal;
 `;

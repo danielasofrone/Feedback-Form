@@ -50,19 +50,15 @@ export const StyledRadioButton = styled.input`
 `;
 
 export const SubmitButton = styled.div`
-  padding: 3px;
+  padding: 7px;
   width: 70px;
   height: 25px;
-  background-color: green;
+  background-color: #6bae52;
+  color: #ecf6e8;
   font-size: 20px;
   margin-top: 30px;
   cursor: pointer;
-  border: 1px solid black;
   text-align: center;
   margin: 20px 0 50px 10px;
-`;
-export const Separator = styled.div`
-  border-bottom: 1px solid #555252;
-  margin: 10px 0;
-  width: 100%;
+  border-radius: 25px;
 `;
