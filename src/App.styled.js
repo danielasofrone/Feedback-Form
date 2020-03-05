@@ -2,9 +2,15 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  background-image: url(https://images.typeform.com/images/eDDxzXVeMFKd);
+  /* background-repeat: repeat; */
+  background-size: cover;
 `;
 export const InputContainer = styled.div`
-  margin: 10px;
+  right: 0;
+  left: 0;
 `;
 export const QuestionContainer = styled.div`
   display: flex;
@@ -18,6 +24,18 @@ export const TextContainer = styled.div`
   padding: 0 0 0 5px;
   display: flex;
   flex-direction: column;
+  animation-name: slideButton;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  @keyframes slideButton {
+    from {
+      transform: translateX(-200px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(100px);
+    }
+  }
 `;
 
 export const SelectableOption = styled.div`
@@ -33,14 +51,14 @@ export const StyledRadioButton = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   margin-top: 3px;
   border-radius: 20px;
   transition: all 150ms;
   cursor: pointer;
   background: transparent;
-  border: 1px solid ${({ checked }) => (checked ? "green" : "grey")};
+  /* border: 1px solid ${({ checked }) => (checked ? "green" : "grey")}; */
   opacity: 1;
   margin-right: 3px;
 

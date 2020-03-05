@@ -61,39 +61,39 @@ const App = () => {
         { valueStatus: "value2", keyStatus: "1.2" },
         { valueStatus: "value3", keyStatus: "1.3" }
       ]
-    },
-    {
-      label: "2. This is a short text",
-      options: [
-        { valueStatus: "value1", keyStatus: "2.1" },
-        { valueStatus: "value2", keyStatus: "2.2" },
-        { valueStatus: "value3", keyStatus: "2.3" }
-      ]
-    },
-    {
-      label: "3. This is a medium text",
-      options: [
-        { valueStatus: "value1", keyStatus: "3.1" },
-        { valueStatus: "value2", keyStatus: "3.2" },
-        { valueStatus: "value3", keyStatus: "3.3" }
-      ]
-    },
-    {
-      label: "4. This is a long text",
-      options: [
-        { valueStatus: "value1", keyStatus: "4.1" },
-        { valueStatus: "value2", keyStatus: "4.2" },
-        { valueStatus: "value3", keyStatus: "4.3" }
-      ]
-    },
-    {
-      label: "5. This is a very long text",
-      options: [
-        { valueStatus: "value1", keyStatus: "5.1" },
-        { valueStatus: "value2", keyStatus: "5.2" },
-        { valueStatus: "value3", keyStatus: "5.3" }
-      ]
     }
+    // {
+    //   label: "2. This is a short text",
+    //   options: [
+    //     { valueStatus: "value1", keyStatus: "2.1" },
+    //     { valueStatus: "value2", keyStatus: "2.2" },
+    //     { valueStatus: "value3", keyStatus: "2.3" }
+    //   ]
+    // },
+    // {
+    //   label: "3. This is a medium text",
+    //   options: [
+    //     { valueStatus: "value1", keyStatus: "3.1" },
+    //     { valueStatus: "value2", keyStatus: "3.2" },
+    //     { valueStatus: "value3", keyStatus: "3.3" }
+    //   ]
+    // },
+    // {
+    //   label: "4. This is a long text",
+    //   options: [
+    //     { valueStatus: "value1", keyStatus: "4.1" },
+    //     { valueStatus: "value2", keyStatus: "4.2" },
+    //     { valueStatus: "value3", keyStatus: "4.3" }
+    //   ]
+    // },
+    // {
+    //   label: "5. This is a very long text",
+    //   options: [
+    //     { valueStatus: "value1", keyStatus: "5.1" },
+    //     { valueStatus: "value2", keyStatus: "5.2" },
+    //     { valueStatus: "value3", keyStatus: "5.3" }
+    //   ]
+    // }
   ];
 
   return (
