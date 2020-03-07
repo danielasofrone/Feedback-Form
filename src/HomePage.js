@@ -9,7 +9,10 @@ import {
   StyledRadioButton,
   SelectableOption,
   SubmitButton,
-  PreviousFeedback
+  Navigation,
+  PageTitleContainer,
+  PageTitle,
+  NavigationLink
 } from "./homePage.styled.js";
 import PopupMessage from "./PopupMessage";
 
@@ -100,7 +103,15 @@ const HomePage = () => {
 
   return (
     <Wrapper>
-      <Link to={"/previous-feedback"}>Hello</Link>
+      <Navigation>
+        <PageTitleContainer>
+          <PageTitle>Daniela Sofrone Feedback</PageTitle>
+        </PageTitleContainer>
+        <NavigationLink>
+          {" "}
+          <Link to={"/previous-feedback"}>Previous feedback</Link>
+        </NavigationLink>
+      </Navigation>
       <InputContainer>
         <QuestionContainer>
           {questions.map((item, index) => (

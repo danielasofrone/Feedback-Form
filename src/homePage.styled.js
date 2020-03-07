@@ -3,29 +3,65 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: lightblue;
-  /* background-image: url(https://images.typeform.com/images/eDDxzXVeMFKd); */
-  /* background-repeat: repeat; */
-  background-size: cover;
 `;
+
 export const InputContainer = styled.div`
   right: 0;
   left: 0;
 `;
-export const PreviousFeedback = styled.div`
-  float: left;
+
+export const Navigation = styled.div`
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  margin-bottom: 60px;
+`;
+
+export const PageTitleContainer = styled.div`
+  border: 2px solid #555252;
+  border-style: solid;
+  width: 90px;
+  height: 70px;
+  padding: 5px;
+  margin: 0 20px 0 10px;
+`;
+
+export const PageTitle = styled.div`
+  font-family: "Roboto", sans-serif;
+  white-space: normal;
+  font-size: 20px;
+  color: #555252;
+  a {
+    text-decoration: none !important;
+    :visited {
+      color: #555252;
+    }
+  }
+`;
+
+export const NavigationLink = styled.div`
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: #555252;
   line-height: 24px;
+  margin: 65px 10px 0 0;
   cursor: pointer;
-  text-decoration: underline;
+
+  a {
+    text-decoration: none !important;
+    :visited {
+      color: #555252;
+    }
+  }
 `;
+
 export const QuestionContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
 export const TextContainer = styled.div`
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   color: #555252;
   line-height: 24px;
@@ -66,7 +102,6 @@ export const StyledRadioButton = styled.input`
   transition: all 150ms;
   cursor: pointer;
   background: transparent;
-  /* border: 1px solid ${({ checked }) => (checked ? "green" : "grey")}; */
   opacity: 1;
   margin-right: 3px;
 
@@ -76,15 +111,15 @@ export const StyledRadioButton = styled.input`
 `;
 
 export const SubmitButton = styled.div`
+  font-family: "Roboto", sans-serif;
   padding: 7px;
   width: 70px;
   height: 25px;
   background-color: #6bae52;
   color: #ecf6e8;
   font-size: 20px;
-  margin-top: 30px;
   cursor: pointer;
   text-align: center;
-  margin: 20px 0 50px 10px;
+  margin: 20px 0 50px 20px;
   border-radius: 25px;
 `;
