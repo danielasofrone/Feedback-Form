@@ -68,18 +68,38 @@ export const TextContainer = styled.div`
   padding: 0 0 0 5px;
   display: flex;
   flex-direction: column;
-  animation-name: slideButton;
+  animation-name: transitionIn;
   animation-duration: 1s;
   animation-fill-mode: both;
-  @keyframes slideButton {
+
+  @keyframes transitionIn {
     from {
       transform: translateX(-200px);
       visibility: visible;
     }
     to {
       transform: translateX(100px);
+      visibility: visible;
     }
   }
+
+  ${({ questionTransition }) =>
+    questionTransition &&
+    `
+    animation-name: transitionOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+  @keyframes transitionOut {
+    from {
+      transform: translateX(100px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(2000px);
+      visibility: visible;
+    }
+    `};
 `;
 
 export const SelectableOption = styled.div`

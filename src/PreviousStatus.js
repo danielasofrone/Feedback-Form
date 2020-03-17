@@ -1,22 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Wrapper } from "./previousStatus.styled";
+import { Wrapper, TextContainer, TextRow } from "./previousStatus.styled";
 import {
   Navigation,
   PageTitleContainer,
   PageTitle,
   NavigationLink
 } from "./homePage.styled";
+
 // const contentful = require("contentful");
 
 // const client = contentful.createClient({
-//   space: "<space_id>",
-//   environment: "<environment_id>", // defaults to 'master' if not set
-//   accessToken: "<content_delivery_api_key>"
+//   content_type: "question",
+//   space: process.env.REACT_APP_SPACE_ID,
+//   environment: "master",
+//   accessToken: process.env.REACT_APP_ACCESS_TOKEN_READ
 // });
 
+// let myEntry = {};
+
 // client
-//   .getEntry("<entry_id>")
+//   .getEntry(process.env.REACT_APP_ENTRY_ID_READ)
 //   .then(entry => console.log(entry))
 //   .catch(console.error);
 
@@ -32,6 +36,9 @@ const PreviousStatus = () => (
         <Link to={"/"}>Feedback form</Link>
       </NavigationLink>
     </Navigation>
+    <TextContainer>
+      {/* {myEntry && <TextRow>{myEntry.fields.title}</TextRow>} */}
+    </TextContainer>
   </Wrapper>
 );
 

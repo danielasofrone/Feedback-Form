@@ -25,6 +25,7 @@ const HomePage = () => {
   const [isChecked, setIsChecked] = useState({});
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [status, setStatus] = useState("error");
+  const [questionAnswered, setQuestionAnswered] = useState(false);
 
   const checkErrorBeforeSubmit = () => {
     const checkedInfo = Object.keys(isChecked).map(key => key);
@@ -74,7 +75,7 @@ const HomePage = () => {
     //     { valueStatus: "value2", keyStatus: "2.2" },
     //     { valueStatus: "value3", keyStatus: "2.3" }
     //   ]
-    // },
+    // }
     // {
     //   label: "3. This is a medium text",
     //   options: [
@@ -100,7 +101,7 @@ const HomePage = () => {
     //   ]
     // }
   ];
-
+  console.log("Text", isChecked);
   return (
     <Wrapper>
       <Navigation>
@@ -115,7 +116,7 @@ const HomePage = () => {
       <InputContainer>
         <QuestionContainer>
           {questions.map((item, index) => (
-            <TextContainer key={index}>
+            <TextContainer key={index} questionTransition={questionAnswered}>
               <p>{item.label}</p>
               {item.options.map((selectedOption, e) => (
                 <SelectableOption>
@@ -125,12 +126,13 @@ const HomePage = () => {
                     name={item.label}
                     value={selectedOption.valueStatus}
                     isChecked={selectedOption.keyStatus}
-                    onChange={() =>
+                    onChange={() => {
+                      setQuestionAnswered(true);
                       setIsChecked({
                         ...isChecked,
                         [index]: selectedOption.keyStatus
-                      })
-                    }
+                      });
+                    }}
                   />
                   <label className="labelStyle">
                     {selectedOption.valueStatus}

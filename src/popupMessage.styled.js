@@ -17,10 +17,12 @@ export const IconContainer = styled.div`
   margin-top: 20px;
   text-align: center;
 `;
+
 export const Icon = styled.img`
   height: 60px;
   width: 60px;
 `;
+
 export const TextContainer = styled.div`
   text-align: center;
   margin-bottom: 30px;
@@ -30,13 +32,15 @@ export const TextContainer = styled.div`
 export const CloseButtonContainer = styled.div`
   position: absolute;
   right: 20px;
-  top: 30px;
+  top: 20px;
   cursor: pointer;
 `;
+
 export const CloseButton = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 `;
+
 export const MessageTitle = styled.div`
   margin: 30px 0 20px 0;
   font-size: 25px;
@@ -44,6 +48,7 @@ export const MessageTitle = styled.div`
   text-align: center;
   font-family: "Roboto", sans-serif;
 `;
+
 export const MessageText = styled.div`
   font-size: 20px;
   color: #555252;
