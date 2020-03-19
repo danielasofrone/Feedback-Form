@@ -61,43 +61,51 @@ const HomePage = () => {
 
   const questions = [
     {
-      label: "1. This is a very short text",
+      label: "1. Code reviews",
       options: [
-        { valueStatus: "value1", keyStatus: "1.1" },
-        { valueStatus: "value2", keyStatus: "1.2" },
-        { valueStatus: "value3", keyStatus: "1.3" }
+        { valueStatus: "to do", keyStatus: "1.1" },
+        { valueStatus: "in progress", keyStatus: "1.2" },
+        { valueStatus: "done", keyStatus: "1.3" }
       ]
     }
     // {
-    //   label: "2. This is a short text",
+    //   label: "2. Use pure Css",
     //   options: [
-    //     { valueStatus: "value1", keyStatus: "2.1" },
-    //     { valueStatus: "value2", keyStatus: "2.2" },
-    //     { valueStatus: "value3", keyStatus: "2.3" }
-    //   ]
-    // }
-    // {
-    //   label: "3. This is a medium text",
-    //   options: [
-    //     { valueStatus: "value1", keyStatus: "3.1" },
-    //     { valueStatus: "value2", keyStatus: "3.2" },
-    //     { valueStatus: "value3", keyStatus: "3.3" }
+    //     { valueStatus: "to do", keyStatus: "2.1" },
+    //     { valueStatus: "in progress", keyStatus: "2.2" },
+    //     { valueStatus: "done", keyStatus: "2.3" }
     //   ]
     // },
     // {
-    //   label: "4. This is a long text",
+    //   label: "3. Understand how our application works(Routing, Next,js etc)",
     //   options: [
-    //     { valueStatus: "value1", keyStatus: "4.1" },
-    //     { valueStatus: "value2", keyStatus: "4.2" },
-    //     { valueStatus: "value3", keyStatus: "4.3" }
+    //     { valueStatus: "to do", keyStatus: "3.1" },
+    //     { valueStatus: "in progress", keyStatus: "3.2" },
+    //     { valueStatus: "done", keyStatus: "3.3" }
     //   ]
     // },
     // {
-    //   label: "5. This is a very long text",
+    //   label: "4. Get out of comfort zone by trying other types of tickets",
     //   options: [
-    //     { valueStatus: "value1", keyStatus: "5.1" },
-    //     { valueStatus: "value2", keyStatus: "5.2" },
-    //     { valueStatus: "value3", keyStatus: "5.3" }
+    //     { valueStatus: "to do", keyStatus: "4.1" },
+    //     { valueStatus: "in progress", keyStatus: "4.2" },
+    //     { valueStatus: "done", keyStatus: "4.3" }
+    //   ]
+    // },
+    // {
+    //   label: "5. Security  - good practices",
+    //   options: [
+    //     { valueStatus: "to do", keyStatus: "5.1" },
+    //     { valueStatus: "in progress", keyStatus: "5.2" },
+    //     { valueStatus: "done", keyStatus: "5.3" }
+    //   ]
+    // },
+    // {
+    //   label: "6. Backend data structure",
+    //   options: [
+    //     { valueStatus: "to do", keyStatus: "5.1" },
+    //     { valueStatus: "in progress", keyStatus: "5.2" },
+    //     { valueStatus: "done", keyStatus: "5.3" }
     //   ]
     // }
   ];

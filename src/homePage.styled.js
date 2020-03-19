@@ -63,8 +63,10 @@ export const QuestionContainer = styled.div`
 export const TextContainer = styled.div`
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  line-height: 27px;
   color: #555252;
-  line-height: 24px;
+  max-width: 320px;
+  white-space: normal;
   padding: 0 0 0 5px;
   display: flex;
   flex-direction: column;
@@ -78,7 +80,7 @@ export const TextContainer = styled.div`
       visibility: visible;
     }
     to {
-      transform: translateX(100px);
+      transform: translateX(30px);
       visibility: visible;
     }
   }
@@ -140,6 +142,8 @@ export const SubmitButton = styled.div`
   font-size: 20px;
   cursor: pointer;
   text-align: center;
-  margin: 20px 0 50px 20px;
+  margin: 30px 0 20px 50px;
+  right: 0;
+  left: 0;
   border-radius: 25px;
 `;
