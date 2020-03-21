@@ -45,10 +45,10 @@ const PopupMessage = ({ popupStatus, closeAction }) => {
             <MessageTitle>{title}</MessageTitle>
             <MessageText>{message}</MessageText>
           </TextContainer>
+          <CloseButtonContainer>
+            <CloseButton src={closeIcon} onClick={closeAction} />
+          </CloseButtonContainer>
         </IconContainer>
-        <CloseButtonContainer>
-          <CloseButton src={closeIcon} onClick={closeAction} />
-        </CloseButtonContainer>
       </PopupContainer>
     </PopupWrapper>
   );

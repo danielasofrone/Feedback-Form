@@ -19,14 +19,15 @@ export const PopupWrapper = styled.div`
 export const PopupContainer = styled.div`
   padding: 20px;
   top: 0;
+  width: 100%;
+  margin: 0 auto;
   height: 100%;
   position: fixed;
-  background: #e9eaeb;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: flex;
+  background: #fff;
 
   @media (min-width: 576px) {
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     overflow: none;
     max-height: initial;
     max-width: 500px;
@@ -36,8 +37,11 @@ export const PopupContainer = styled.div`
   }
 `;
 export const IconContainer = styled.div`
-  margin-top: 20px;
+  margin-top: 100px;
   text-align: center;
+  @media (min-width: 576px) {
+    margin: 0 auto;
+  }
 `;
 
 export const Icon = styled.img`
@@ -53,7 +57,7 @@ export const TextContainer = styled.div`
 
 export const CloseButtonContainer = styled.div`
   position: absolute;
-  right: 20px;
+  right: 40px;
   top: 20px;
   cursor: pointer;
 `;
