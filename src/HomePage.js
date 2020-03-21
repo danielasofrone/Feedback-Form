@@ -67,47 +67,47 @@ const HomePage = () => {
         { valueStatus: "in progress", keyStatus: "1.2" },
         { valueStatus: "done", keyStatus: "1.3" }
       ]
+    },
+    {
+      label: "2. Use pure Css",
+      options: [
+        { valueStatus: "to do", keyStatus: "2.1" },
+        { valueStatus: "in progress", keyStatus: "2.2" },
+        { valueStatus: "done", keyStatus: "2.3" }
+      ]
+    },
+    {
+      label: "3. Understand how our application works(Routing, Next,js etc)",
+      options: [
+        { valueStatus: "to do", keyStatus: "3.1" },
+        { valueStatus: "in progress", keyStatus: "3.2" },
+        { valueStatus: "done", keyStatus: "3.3" }
+      ]
+    },
+    {
+      label: "4. Get out of comfort zone by trying other types of tickets",
+      options: [
+        { valueStatus: "to do", keyStatus: "4.1" },
+        { valueStatus: "in progress", keyStatus: "4.2" },
+        { valueStatus: "done", keyStatus: "4.3" }
+      ]
+    },
+    {
+      label: "5. Security  - good practices",
+      options: [
+        { valueStatus: "to do", keyStatus: "5.1" },
+        { valueStatus: "in progress", keyStatus: "5.2" },
+        { valueStatus: "done", keyStatus: "5.3" }
+      ]
+    },
+    {
+      label: "6. Backend data structure",
+      options: [
+        { valueStatus: "to do", keyStatus: "5.1" },
+        { valueStatus: "in progress", keyStatus: "5.2" },
+        { valueStatus: "done", keyStatus: "5.3" }
+      ]
     }
-    // {
-    //   label: "2. Use pure Css",
-    //   options: [
-    //     { valueStatus: "to do", keyStatus: "2.1" },
-    //     { valueStatus: "in progress", keyStatus: "2.2" },
-    //     { valueStatus: "done", keyStatus: "2.3" }
-    //   ]
-    // },
-    // {
-    //   label: "3. Understand how our application works(Routing, Next,js etc)",
-    //   options: [
-    //     { valueStatus: "to do", keyStatus: "3.1" },
-    //     { valueStatus: "in progress", keyStatus: "3.2" },
-    //     { valueStatus: "done", keyStatus: "3.3" }
-    //   ]
-    // },
-    // {
-    //   label: "4. Get out of comfort zone by trying other types of tickets",
-    //   options: [
-    //     { valueStatus: "to do", keyStatus: "4.1" },
-    //     { valueStatus: "in progress", keyStatus: "4.2" },
-    //     { valueStatus: "done", keyStatus: "4.3" }
-    //   ]
-    // },
-    // {
-    //   label: "5. Security  - good practices",
-    //   options: [
-    //     { valueStatus: "to do", keyStatus: "5.1" },
-    //     { valueStatus: "in progress", keyStatus: "5.2" },
-    //     { valueStatus: "done", keyStatus: "5.3" }
-    //   ]
-    // },
-    // {
-    //   label: "6. Backend data structure",
-    //   options: [
-    //     { valueStatus: "to do", keyStatus: "5.1" },
-    //     { valueStatus: "in progress", keyStatus: "5.2" },
-    //     { valueStatus: "done", keyStatus: "5.3" }
-    //   ]
-    // }
   ];
   console.log("Text", isChecked);
   return (
@@ -149,8 +149,8 @@ const HomePage = () => {
               ))}
             </TextContainer>
           ))}
+          <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
         </QuestionContainer>
-        <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
       </InputContainer>
       {isPopupOpen && (
         <PopupMessage

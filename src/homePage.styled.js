@@ -5,11 +5,6 @@ export const Wrapper = styled.div`
   height: 100%;
 `;
 
-export const InputContainer = styled.div`
-  right: 0;
-  left: 0;
-`;
-
 export const Navigation = styled.div`
   width: 100%;
   padding: 20px 0;
@@ -55,24 +50,34 @@ export const NavigationLink = styled.div`
   }
 `;
 
-export const QuestionContainer = styled.div`
+export const InputContainer = styled.div`
   display: flex;
-  flex-direction: column;
+`;
+
+export const QuestionContainer = styled.div`
+  position: relative;
+  margin: 0 auto;
 `;
 
 export const TextContainer = styled.div`
   font-family: "Roboto", sans-serif;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.07) 0 7px 50px 0;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
   font-size: 20px;
   line-height: 27px;
   color: #555252;
   max-width: 320px;
   white-space: normal;
-  padding: 0 0 0 5px;
-  display: flex;
+  padding: 5px 5px 10px 15px;
   flex-direction: column;
-  animation-name: transitionIn;
+  /* animation-name: transitionIn;
   animation-duration: 1s;
   animation-fill-mode: both;
+  @media (max-width: 576px) {
+  }
 
   @keyframes transitionIn {
     from {
@@ -101,7 +106,7 @@ export const TextContainer = styled.div`
       transform: translateX(2000px);
       visibility: visible;
     }
-    `};
+    `}; */
 `;
 
 export const SelectableOption = styled.div`
@@ -142,8 +147,6 @@ export const SubmitButton = styled.div`
   font-size: 20px;
   cursor: pointer;
   text-align: center;
-  margin: 30px 0 20px 50px;
-  right: 0;
-  left: 0;
+  margin: 30px auto;
   border-radius: 25px;
 `;

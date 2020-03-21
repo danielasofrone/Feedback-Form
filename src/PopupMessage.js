@@ -6,6 +6,7 @@ import closeIcon from "./assets/close.svg";
 
 import {
   PopupWrapper,
+  PopupContainer,
   IconContainer,
   Icon,
   TextContainer,
@@ -37,16 +38,18 @@ const PopupMessage = ({ popupStatus, closeAction }) => {
 
   return (
     <PopupWrapper>
-      <IconContainer>
-        <TextContainer>
-          <Icon src={icon}></Icon>
-          <MessageTitle>{title}</MessageTitle>
-          <MessageText>{message}</MessageText>
-        </TextContainer>
-      </IconContainer>
-      <CloseButtonContainer>
-        <CloseButton src={closeIcon} onClick={closeAction} />
-      </CloseButtonContainer>
+      <PopupContainer>
+        <IconContainer>
+          <TextContainer>
+            <Icon src={icon}></Icon>
+            <MessageTitle>{title}</MessageTitle>
+            <MessageText>{message}</MessageText>
+          </TextContainer>
+        </IconContainer>
+        <CloseButtonContainer>
+          <CloseButton src={closeIcon} onClick={closeAction} />
+        </CloseButtonContainer>
+      </PopupContainer>
     </PopupWrapper>
   );
 };
