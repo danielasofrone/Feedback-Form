@@ -73,40 +73,6 @@ export const TextContainer = styled.div`
   white-space: normal;
   padding: 5px 5px 10px 15px;
   flex-direction: column;
-  /* animation-name: transitionIn;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  @media (max-width: 576px) {
-  }
-
-  @keyframes transitionIn {
-    from {
-      transform: translateX(-200px);
-      visibility: visible;
-    }
-    to {
-      transform: translateX(30px);
-      visibility: visible;
-    }
-  }
-
-  ${({ questionTransition }) =>
-    questionTransition &&
-    `
-    animation-name: transitionOut;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-
-  @keyframes transitionOut {
-    from {
-      transform: translateX(100px);
-      visibility: visible;
-    }
-    to {
-      transform: translateX(2000px);
-      visibility: visible;
-    }
-    `}; */
 `;
 
 export const SelectableOption = styled.div`

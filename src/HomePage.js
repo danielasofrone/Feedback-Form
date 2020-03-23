@@ -25,7 +25,6 @@ const HomePage = () => {
   const [isChecked, setIsChecked] = useState({});
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [status, setStatus] = useState("error");
-  const [questionAnswered, setQuestionAnswered] = useState(false);
 
   const checkErrorBeforeSubmit = () => {
     const checkedInfo = Object.keys(isChecked).map(key => key);
@@ -124,7 +123,7 @@ const HomePage = () => {
       <InputContainer>
         <QuestionContainer>
           {questions.map((item, index) => (
-            <TextContainer key={index} questionTransition={questionAnswered}>
+            <TextContainer key={index}>
               <p>{item.label}</p>
               {item.options.map((selectedOption, e) => (
                 <SelectableOption>
@@ -135,7 +134,6 @@ const HomePage = () => {
                     value={selectedOption.valueStatus}
                     isChecked={selectedOption.keyStatus}
                     onChange={() => {
-                      setQuestionAnswered(true);
                       setIsChecked({
                         ...isChecked,
                         [index]: selectedOption.keyStatus
