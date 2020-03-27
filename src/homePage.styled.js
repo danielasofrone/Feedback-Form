@@ -118,3 +118,20 @@ export const SubmitButton = styled.div`
   margin: 30px auto;
   border-radius: 25px;
 `;
+
+export const Element = styled.div`
+  display: flex;
+`;
+
+export const Question = styled.div`
+  font-family: "Roboto", sans-serif;
+  color: #555252;
+  font-size: 18px;
+  padding-bottom: 5px;
+`;
+
+export const IconContainer = styled.img`
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+`;
