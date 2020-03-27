@@ -1,20 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {
-  Wrapper,
-  QuestionContainer,
-  InputContainer,
-  TextContainer,
-  StyledRadioButton,
-  SelectableOption,
-  SubmitButton,
-  Navigation,
-  PageTitleContainer,
-  PageTitle,
-  NavigationLink
-} from "./homePage.styled.js";
+import * as S from "./homePage.styled.js";
 import PopupMessage from "./PopupMessage";
+import logodaniela from "./assets/logodaniela.svg";
 
 const contentful = require("contentful-management");
 const client = contentful.createClient({
@@ -53,7 +42,7 @@ const HomePage = () => {
             }
           })
         )
-        .then(entry => console.log(entry))
+        .then(() => window.location.reload())
         .catch(console.error);
     }
   };
@@ -110,24 +99,28 @@ const HomePage = () => {
   ];
   console.log("Text", isChecked);
   return (
-    <Wrapper>
-      <Navigation>
-        <PageTitleContainer>
-          <PageTitle>Daniela Sofrone Feedback</PageTitle>
-        </PageTitleContainer>
-        <NavigationLink>
-          {" "}
-          <Link to={"/previous-feedback"}>Previous feedback</Link>
-        </NavigationLink>
-      </Navigation>
-      <InputContainer>
-        <QuestionContainer>
+    <S.Wrapper>
+      <S.Navigation>
+        <S.PageTitleContainer>
+          <S.Icon src={logodaniela}></S.Icon>
+          <S.NavigationLink>
+            <Link to={"/previous-feedback"}>Previous feedback</Link>
+          </S.NavigationLink>
+        </S.PageTitleContainer>
+      </S.Navigation>
+      <S.InputContainer>
+        <S.QuestionContainer>
+          <S.SubtitleContainer>
+            <S.Subtitle>
+              <p>Feedback Form</p>
+            </S.Subtitle>
+          </S.SubtitleContainer>
           {questions.map((item, index) => (
-            <TextContainer key={index}>
+            <S.TextContainer key={index}>
               <p>{item.label}</p>
               {item.options.map((selectedOption, e) => (
-                <SelectableOption>
-                  <StyledRadioButton
+                <S.SelectableOption>
+                  <S.StyledRadioButton
                     key={e}
                     type="radio"
                     name={item.label}
@@ -143,20 +136,20 @@ const HomePage = () => {
                   <label className="labelStyle">
                     {selectedOption.valueStatus}
                   </label>
-                </SelectableOption>
+                </S.SelectableOption>
               ))}
-            </TextContainer>
+            </S.TextContainer>
           ))}
-          <SubmitButton onClick={handleSubmit}>Submit</SubmitButton>
-        </QuestionContainer>
-      </InputContainer>
+          <S.SubmitButton onClick={handleSubmit}>Submit</S.SubmitButton>
+        </S.QuestionContainer>
+      </S.InputContainer>
       {isPopupOpen && (
         <PopupMessage
           popupStatus={status}
           closeAction={closePopup}
         ></PopupMessage>
       )}
-    </Wrapper>
+    </S.Wrapper>
   );
 };
 

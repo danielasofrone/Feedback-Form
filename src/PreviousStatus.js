@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Wrapper, TextContainer, TextRow } from "./previousStatus.styled";
-import {
-  Navigation,
-  PageTitleContainer,
-  PageTitle,
-  NavigationLink
-} from "./homePage.styled";
+import * as S from "./homePage.styled.js";
+import logodaniela from "./assets/logodaniela.svg";
+import success from "./assets/success.svg";
+import todo from "./assets/todo.svg";
+import progress from "./assets/progress.svg";
 
 // const contentful = require("contentful");
 
@@ -25,21 +23,25 @@ import {
 //   .catch(console.error);
 
 const PreviousStatus = () => (
-  <Wrapper>
-    <Navigation>
-      <PageTitleContainer>
-        <PageTitle>
-          <Link to={"/"}>Daniela Sofrone Feedback</Link>
-        </PageTitle>
-      </PageTitleContainer>
-      <NavigationLink>
-        <Link to={"/"}>Feedback form</Link>
-      </NavigationLink>
-    </Navigation>
-    <TextContainer>
-      {/* {myEntry && <TextRow>{myEntry.fields.title}</TextRow>} */}
-    </TextContainer>
-  </Wrapper>
+  <S.Wrapper>
+    <S.Navigation>
+      <S.PageTitleContainer>
+        <Link to={"/"}>
+          {" "}
+          <S.Icon src={logodaniela}></S.Icon>
+        </Link>
+        <S.NavigationLink>
+          <Link to={"/"}>Feedback form</Link>
+        </S.NavigationLink>
+      </S.PageTitleContainer>
+    </S.Navigation>
+    <S.SubtitleContainer>
+      <S.Subtitle isHomepage={"0 auto"}>
+        <p>Previous Status</p>
+      </S.Subtitle>
+    </S.SubtitleContainer>
+    <S.TextContainer></S.TextContainer>
+  </S.Wrapper>
 );
 
 export default PreviousStatus;

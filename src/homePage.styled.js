@@ -7,37 +7,43 @@ export const Wrapper = styled.div`
 
 export const Navigation = styled.div`
   width: 100%;
-  padding: 20px 0;
   display: flex;
-  margin-bottom: 60px;
 `;
 
 export const PageTitleContainer = styled.div`
-  border: 2px solid #555252;
-  border-style: solid;
-  width: 90px;
-  height: 70px;
-  padding: 5px;
-  margin: 0 20px 0 10px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
 `;
 
-export const PageTitle = styled.div`
+export const SubtitleContainer = styled.div`
+  display: flex;
+`;
+
+export const Subtitle = styled.div`
   font-family: "Roboto", sans-serif;
-  white-space: normal;
+  color: #1d1c1c;
   font-size: 20px;
-  color: #555252;
-  a {
-    text-decoration: none !important;
-    :visited {
-      color: #555252;
-    }
+  font-weight: 600;
+  position: relative;
+  margin: ${({ isHomepage }) => (isHomepage ? isHomepage : "0")};
+
+  p {
+    float: left;
   }
+`;
+
+export const Icon = styled.img`
+  height: 150px;
+  width: 150px;
+  margin-right: 30px;
 `;
 
 export const NavigationLink = styled.div`
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  color: #555252;
+  font-size: 18px;
+  color: #1d82a1;
+  text-transform: uppercase;
   line-height: 24px;
   margin: 65px 10px 0 0;
   cursor: pointer;
@@ -45,7 +51,7 @@ export const NavigationLink = styled.div`
   a {
     text-decoration: none !important;
     :visited {
-      color: #555252;
+      color: #1d82a1;
     }
   }
 `;
@@ -97,10 +103,6 @@ export const StyledRadioButton = styled.input`
   background: transparent;
   opacity: 1;
   margin-right: 3px;
-
-  &:active {
-    border: 1px solid green;
-  }
 `;
 
 export const SubmitButton = styled.div`

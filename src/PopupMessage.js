@@ -3,18 +3,7 @@ import PropTypes from "prop-types";
 import errorIcon from "./assets/error.svg";
 import successIcon from "./assets/success.svg";
 import closeIcon from "./assets/close.svg";
-
-import {
-  PopupWrapper,
-  PopupContainer,
-  IconContainer,
-  Icon,
-  TextContainer,
-  CloseButtonContainer,
-  CloseButton,
-  MessageTitle,
-  MessageText
-} from "./popupMessage.styled";
+import * as S from "./popupMessage.styled.js";
 
 const PopupMessage = ({ popupStatus, closeAction }) => {
   const errorMessageTitle = "Oh Snap!";
@@ -37,20 +26,20 @@ const PopupMessage = ({ popupStatus, closeAction }) => {
   }
 
   return (
-    <PopupWrapper>
-      <PopupContainer>
-        <IconContainer>
-          <TextContainer>
-            <Icon src={icon}></Icon>
-            <MessageTitle>{title}</MessageTitle>
-            <MessageText>{message}</MessageText>
-          </TextContainer>
-          <CloseButtonContainer>
-            <CloseButton src={closeIcon} onClick={closeAction} />
-          </CloseButtonContainer>
-        </IconContainer>
-      </PopupContainer>
-    </PopupWrapper>
+    <S.PopupWrapper>
+      <S.PopupContainer>
+        <S.IconContainer>
+          <S.TextContainer>
+            <S.Icon src={icon}></S.Icon>
+            <S.MessageTitle>{title}</S.MessageTitle>
+            <S.MessageText>{message}</S.MessageText>
+          </S.TextContainer>
+          <S.CloseButtonContainer>
+            <S.CloseButton src={closeIcon} onClick={closeAction} />
+          </S.CloseButtonContainer>
+        </S.IconContainer>
+      </S.PopupContainer>
+    </S.PopupWrapper>
   );
 };
 
