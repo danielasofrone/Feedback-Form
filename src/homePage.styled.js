@@ -22,7 +22,7 @@ export const SubtitleContainer = styled.div`
 
 export const Subtitle = styled.div`
   font-family: "Roboto", sans-serif;
-  color: #1d1c1c;
+  color: #555252;
   font-size: 20px;
   font-weight: 600;
   position: relative;
@@ -41,7 +41,7 @@ export const Icon = styled.img`
 
 export const NavigationLink = styled.div`
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #1d82a1;
   text-transform: uppercase;
   line-height: 24px;
@@ -71,13 +71,13 @@ export const TextContainer = styled.div`
   box-shadow: rgba(0, 0, 0, 0.07) 0 7px 50px 0;
   background-color: #fff;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 27px;
   color: #555252;
-  max-width: 320px;
   white-space: normal;
-  padding: 5px 5px 10px 15px;
+  padding: ${({ isPreviousPage }) =>
+    isPreviousPage ? isPreviousPage : "5px 5px 10px 15px"};
   flex-direction: column;
 `;
 
@@ -127,11 +127,14 @@ export const Question = styled.div`
   font-family: "Roboto", sans-serif;
   color: #555252;
   font-size: 18px;
-  padding-bottom: 5px;
+  margin-bottom: 10px;
 `;
 
-export const IconContainer = styled.img`
+export const IconContainer = styled.div`
+  margin-right: 15px;
+`;
+
+export const ElementIcon = styled.img`
   height: 25px;
   width: 25px;
-  margin-right: 10px;
 `;

@@ -112,7 +112,7 @@ const HomePage = () => {
         <S.QuestionContainer>
           <S.SubtitleContainer>
             <S.Subtitle>
-              <p>Feedback Form</p>
+              <p>Feedback form</p>
             </S.Subtitle>
           </S.SubtitleContainer>
           {questions.map((item, index) => (

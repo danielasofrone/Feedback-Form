@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./homePage.styled.js";
 import logodaniela from "./assets/logodaniela.svg";
-import success from "./assets/success.svg";
+import done from "./assets/done.svg";
 import todo from "./assets/todo.svg";
 import progress from "./assets/progress.svg";
 
@@ -44,64 +44,90 @@ const PreviousStatus = () => (
     </S.Navigation>
     <S.SubtitleContainer>
       <S.Subtitle isHomepage={"0 auto"}>
-        <p>Previous Status</p>
+        <p>Previous status</p>
       </S.Subtitle>
     </S.SubtitleContainer>
-    <S.QuestionContainer>
-      <S.TextContainer>
-        <S.Element>
-          <S.IconContainer src={todo}></S.IconContainer>
-          <S.Question>{questions[0]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={todo}></S.IconContainer>
-          <S.Question>{questions[1]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={todo}></S.IconContainer>
-          <S.Question>{questions[2]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={todo}></S.IconContainer>
-          <S.Question>{questions[3]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={todo}></S.IconContainer>
-          <S.Question>{questions[4]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={todo}></S.IconContainer>
-          <S.Question>{questions[5]}</S.Question>
-        </S.Element>
-      </S.TextContainer>
+    <S.InputContainer>
+      <S.QuestionContainer>
+        <S.TextContainer isPreviousPage={" 25px"}>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={todo}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[0]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={todo}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[1]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={todo}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[2]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={todo}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[3]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={todo}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[4]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={todo}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[5]}</S.Question>
+          </S.Element>
+        </S.TextContainer>
 
-      <S.TextContainer>
-        <S.Element>
-          <S.IconContainer src={progress}></S.IconContainer>
-          <S.Question>{questions[0]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={success}></S.IconContainer>
-          <S.Question>{questions[1]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={progress}></S.IconContainer>
-          <S.Question>{questions[2]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={progress}></S.IconContainer>
-          <S.Question>{questions[3]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={progress}></S.IconContainer>
-          <S.Question>{questions[4]}</S.Question>
-        </S.Element>
-        <S.Element>
-          <S.IconContainer src={progress}></S.IconContainer>
-          <S.Question>{questions[5]}</S.Question>
-        </S.Element>
-      </S.TextContainer>
-    </S.QuestionContainer>
+        <S.TextContainer isPreviousPage={" 25px"}>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={progress}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[0]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={done}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[1]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={progress}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[2]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={progress}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[3]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={progress}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[4]}</S.Question>
+          </S.Element>
+          <S.Element>
+            <S.IconContainer>
+              <S.ElementIcon src={todo}></S.ElementIcon>
+            </S.IconContainer>
+            <S.Question>{questions[5]}</S.Question>
+          </S.Element>
+        </S.TextContainer>
+      </S.QuestionContainer>
+    </S.InputContainer>
   </S.Wrapper>
 );
 
