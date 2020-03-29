@@ -25,9 +25,9 @@ import progress from "./assets/progress.svg";
 const questions = [
   "1. Code reviews",
   "2. Use pure Css",
-  "3. Understand how our application worksRouting Nextjs etc",
+  "3. Understand how our application works( Routing, Next.js etc)",
   "4. Get out of comfort zone by trying other types of tickets",
-  "5. Security - good practices ",
+  "5. Security - good practices",
   "6. Backend data structure"
 ];
 const PreviousStatus = () => (
@@ -42,14 +42,15 @@ const PreviousStatus = () => (
         </S.NavigationLink>
       </S.PageTitleContainer>
     </S.Navigation>
-    <S.SubtitleContainer>
-      <S.Subtitle isHomepage={"0 auto"}>
-        <p>Previous status</p>
-      </S.Subtitle>
-    </S.SubtitleContainer>
     <S.InputContainer>
       <S.QuestionContainer>
+        <S.SubtitleContainer>
+          <S.Subtitle>
+            <p>Previous status</p>
+          </S.Subtitle>
+        </S.SubtitleContainer>
         <S.TextContainer isPreviousPage={" 25px"}>
+          <S.DateContainer>4 December 2019</S.DateContainer>
           <S.Element>
             <S.IconContainer>
               <S.ElementIcon src={todo}></S.ElementIcon>
@@ -89,6 +90,7 @@ const PreviousStatus = () => (
         </S.TextContainer>
 
         <S.TextContainer isPreviousPage={" 25px"}>
+          <S.DateContainer>31 January 2020</S.DateContainer>
           <S.Element>
             <S.IconContainer>
               <S.ElementIcon src={progress}></S.ElementIcon>

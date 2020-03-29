@@ -65,7 +65,7 @@ const HomePage = () => {
       ]
     },
     {
-      label: "3. Understand how our application works(Routing, Next,js etc)",
+      label: "3. Understand how our application works(Routing, Nextjs etc)",
       options: [
         { valueStatus: "to do", keyStatus: "3.1" },
         { valueStatus: "in progress", keyStatus: "3.2" },

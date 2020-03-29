@@ -26,7 +26,7 @@ export const Subtitle = styled.div`
   font-size: 20px;
   font-weight: 600;
   position: relative;
-  margin: ${({ isHomepage }) => (isHomepage ? isHomepage : "0")};
+  margin: 0;
 
   p {
     float: left;
@@ -37,6 +37,9 @@ export const Icon = styled.img`
   height: 150px;
   width: 150px;
   margin-right: 30px;
+  @media (min-width: 576px) {
+    margin-right: 255px;
+  }
 `;
 
 export const NavigationLink = styled.div`
@@ -45,7 +48,7 @@ export const NavigationLink = styled.div`
   color: #1d82a1;
   text-transform: uppercase;
   line-height: 24px;
-  margin: 65px 10px 0 0;
+  margin: 65px 0 0 0;
   cursor: pointer;
 
   a {
@@ -137,4 +140,11 @@ export const IconContainer = styled.div`
 export const ElementIcon = styled.img`
   height: 25px;
   width: 25px;
+`;
+
+export const DateContainer = styled.div`
+  font-family: "Roboto", sans-serif;
+  color: #555252;
+  font-size: 20px;
+  margin-bottom: 20px;
 `;
