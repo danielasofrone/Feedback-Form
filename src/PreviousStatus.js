@@ -32,7 +32,8 @@ const questions = [
 ];
 const PreviousStatus = () => (
   <S.Wrapper>
-    <S.Navigation>
+    <S.InputContainer>
+      <S.QuestionContainer>
       <S.PageTitleContainer>
         <Link to={"/"}>
           <S.Icon src={logodaniela}></S.Icon>
@@ -41,9 +42,6 @@ const PreviousStatus = () => (
           <Link to={"/"}>Feedback form</Link>
         </S.NavigationLink>
       </S.PageTitleContainer>
-    </S.Navigation>
-    <S.InputContainer>
-      <S.QuestionContainer>
         <S.SubtitleContainer>
           <S.Subtitle>
             <p>Previous status</p>

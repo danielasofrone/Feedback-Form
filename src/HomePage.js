@@ -42,7 +42,9 @@ const HomePage = () => {
             }
           })
         )
-        .then(() => window.location.reload())
+        .then(setTimeout(function () {
+          window.location.reload(1);
+      }, 5000))
         .catch(console.error);
     }
   };
@@ -100,16 +102,14 @@ const HomePage = () => {
   console.log("Text", isChecked);
   return (
     <S.Wrapper>
-      <S.Navigation>
+      <S.InputContainer>
+        <S.QuestionContainer>
         <S.PageTitleContainer>
           <S.Icon src={logodaniela}></S.Icon>
           <S.NavigationLink>
             <Link to={"/previous-feedback"}>Previous feedback</Link>
           </S.NavigationLink>
         </S.PageTitleContainer>
-      </S.Navigation>
-      <S.InputContainer>
-        <S.QuestionContainer>
           <S.SubtitleContainer>
             <S.Subtitle>
               <p>Feedback form</p>

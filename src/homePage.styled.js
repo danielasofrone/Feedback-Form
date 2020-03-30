@@ -5,15 +5,10 @@ export const Wrapper = styled.div`
   height: 100%;
 `;
 
-export const Navigation = styled.div`
-  width: 100%;
-  display: flex;
-`;
-
 export const PageTitleContainer = styled.div`
-  position: relative;
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
 `;
 
 export const SubtitleContainer = styled.div`
@@ -36,16 +31,11 @@ export const Subtitle = styled.div`
 export const Icon = styled.img`
   height: 150px;
   width: 150px;
-  margin-right: 30px;
-  @media (min-width: 576px) {
-    margin-right: 255px;
-  }
 `;
 
 export const NavigationLink = styled.div`
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  color: #1d82a1;
+  font-size: 14px;
   text-transform: uppercase;
   line-height: 24px;
   margin: 65px 0 0 0;
@@ -53,9 +43,13 @@ export const NavigationLink = styled.div`
 
   a {
     text-decoration: none !important;
+    color: #1d82a1;
     :visited {
       color: #1d82a1;
     }
+  }
+  @media (min-width: 576px) {
+    font-size: 16px;
   }
 `;
 
