@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import errorIcon from "./assets/error.svg";
-import successIcon from "./assets/success.svg";
-import closeIcon from "./assets/close.svg";
+import errorIcon from "../assets/error.svg";
+import successIcon from "../assets/success.svg";
+import closeIcon from "../assets/close.svg";
 import * as S from "./popupMessage.styled.js";
 
 const PopupMessage = ({ popupStatus, closeAction }) => {
@@ -46,6 +46,6 @@ const PopupMessage = ({ popupStatus, closeAction }) => {
 PopupMessage.propTypes = {
   closeAction: PropTypes.func,
   error: PropTypes.bool,
-  success: PropTypes.bool
+  success: PropTypes.bool,
 };
 export default PopupMessage;

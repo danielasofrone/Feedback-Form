@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HomePage from "./HomePage";
-import PreviousStatus from "./PreviousStatus";
+import HomePage from "./HomePage/HomePage";
+import PreviousStatus from "./PreviousStatus/PreviousStatus";
 
 const App = () => {
   return (

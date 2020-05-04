@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as S from "./homePage.styled.js";
-import logodaniela from "./assets/logodaniela.svg";
-import done from "./assets/done.svg";
-import todo from "./assets/todo.svg";
-import progress from "./assets/progress.svg";
+import * as S from "../HomePage/homePage.styled.js";
+import logodaniela from "../assets/logodaniela.svg";
+import done from "../assets/done.svg";
+import todo from "../assets/todo.svg";
+import progress from "../assets/progress.svg";
 
 // const contentful = require("contentful");
 
@@ -28,20 +28,20 @@ const questions = [
   "3. Understand how our application works( Routing, Next.js etc)",
   "4. Get out of comfort zone by trying other types of tickets",
   "5. Security - good practices",
-  "6. Backend data structure"
+  "6. Backend data structure",
 ];
 const PreviousStatus = () => (
   <S.Wrapper>
     <S.InputContainer>
       <S.QuestionContainer>
-      <S.PageTitleContainer>
-        <Link to={"/"}>
-          <S.Icon src={logodaniela}></S.Icon>
-        </Link>
-        <S.NavigationLink>
-          <Link to={"/"}>Feedback form</Link>
-        </S.NavigationLink>
-      </S.PageTitleContainer>
+        <S.PageTitleContainer>
+          <Link to={"/"}>
+            <S.Icon src={logodaniela}></S.Icon>
+          </Link>
+          <S.NavigationLink>
+            <Link to={"/"}>Feedback form</Link>
+          </S.NavigationLink>
+        </S.PageTitleContainer>
         <S.SubtitleContainer>
           <S.Subtitle>
             <p>Previous status</p>
