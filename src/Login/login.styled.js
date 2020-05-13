@@ -14,6 +14,7 @@ export const CredentialsContainer = styled.div`
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 20px;
+  max-width: 500px;
 `;
 
 export const Credentials = styled.div`
@@ -47,7 +48,7 @@ export const Input = styled.input`
   line-height: 24px;
   letter-spacing: 0.45;
   background-color: #f7f9fa;
-  border: 1px solid #dbe3e7;
+  border: ${({ error }) => (error ? error : "1px solid #dbe3e7")};
   border-radius: 3px;
   width: 100%;
   padding: 8px;

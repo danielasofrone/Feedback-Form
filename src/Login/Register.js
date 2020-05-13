@@ -15,7 +15,7 @@ const Register = () => {
           <S.CredentialsContainer>
             <S.TitleContainer>Get started</S.TitleContainer>
             <S.Credentials>
-              <S.Input placeholder="First and last name"></S.Input>
+              <S.Input placeholder="Name"></S.Input>
               <S.Input placeholder="Email"></S.Input>
               <S.Input placeholder="Password"></S.Input>
               <S.ButtonContainer>
