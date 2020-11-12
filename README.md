@@ -4,5 +4,4 @@ Data is stored using the Contentful Management API.
 Used ReactJs, Styled Components, React Router
 Status of previous feedback on the second page is hardcoded
 Added responsiveness
-Deployed on http://danielasofrone.com/
 
