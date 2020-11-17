@@ -33,26 +33,6 @@ export const Icon = styled.img`
   width: 150px;
 `;
 
-export const NavigationLink = styled.div`
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  line-height: 24px;
-  margin: 65px 0 0 0;
-  cursor: pointer;
-
-  a {
-    text-decoration: none !important;
-    color: #1d82a1;
-    :visited {
-      color: #1d82a1;
-    }
-  }
-  @media (min-width: 576px) {
-    font-size: 16px;
-  }
-`;
-
 export const InputContainer = styled.div`
   display: flex;
 `;

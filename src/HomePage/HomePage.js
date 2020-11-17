@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import * as S from "./homePage.styled.js";
 import PopupMessage from "../PopupMessage/PopupMessage";
@@ -17,7 +16,7 @@ const HomePage = () => {
 
   const checkErrorBeforeSubmit = () => {
     const checkedInfo = Object.keys(isChecked).map((key) => key);
-    if (checkedInfo.length < 5) return true;
+    if (checkedInfo.length < 6) return true;
     return false;
   };
 
@@ -108,9 +107,6 @@ const HomePage = () => {
         <S.QuestionContainer>
           <S.PageTitleContainer>
             <S.Icon src={logodaniela}></S.Icon>
-            <S.NavigationLink>
-              <Link to={"/previous-feedback"}>Previous feedback</Link>
-            </S.NavigationLink>
           </S.PageTitleContainer>
           <S.SubtitleContainer>
             <S.Subtitle>
